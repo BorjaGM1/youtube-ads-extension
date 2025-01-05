@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Ad Placer",
+  "version": "1.0",
+  "description": "Automatically place ads in YouTube videos during upload",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.studio.youtube.com/*"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
